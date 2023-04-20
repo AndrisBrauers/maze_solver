@@ -1,0 +1,11 @@
+Solution 11x11 = 191
+Solution 31x31 = 1616
+Solution 101x101 = 2480
+
+The code uses the Dijkstra algorithm to solve the maze.
+
+The time complexity of this code is O(n*log(n), where n is the number of cells in the maze. The most time-consuming operation in the code is the while loop, which runs until the heap "unvisited" is empty or 'G' cell is reached. In each iteration of the while loop, the code performs a constant number of operations, and it also pops the smallest item from the heap using the heapq.heappop() function, which takes O(log(n) time. The 2 for loops before it, which finds the start and end cell coordinates and function read_maze_2d, does not influence the time complexity, since it only loops through all the cells which is O(n) time.
+
+Therefore, since the while loop runs at most n times (once for each cell in the maze), the total time complexity of the code is O(n*log(n)).
+
+The space complexity of the code is O(n), since the code uses two dictionaries, a heap, and list of lists (maze), all of which can store at most n items. In addition, the code creates several temporary variables, which can store at most constant amounts of data. Therefore, the total space complexity of the code is O(n).
